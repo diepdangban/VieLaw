@@ -17,17 +17,7 @@
 It serves as a testbed for evaluating three core competencies of Legal LLMs:
 * **Legal Text Classification** (Understanding)
 * **Legal Information Retrieval** (Memorization)
-* **Legal Reasoning & Application** (Generative Application)
-
----
-
-## 🎯 Design Objectives
-
-The development of VieLaw is guided by three primary design principles to ensure robustness and relevance:
-
-1.  **Legal Grounding:** The dataset is rigorously grounded in the legal domain. All instances are derived directly from official, currently effective Vietnamese legal documents, ensuring that the benchmark reflects authentic and up-to-date legal standards.
-2.  **Hierarchical Cognitive Evaluation:** Recognizing that legal competence is stratified, VieLaw assesses capabilities extending beyond factual recall to include the interpretation of legal scenarios and the application of statutory rules.
-3.  **Multi-Domain Coverage:** The dataset encompasses multiple legal domains—specifically criminal, civil, and administrative law—to mitigate domain-specific bias and enable a comprehensive assessment of model generalization.
+* **Legal Reasoning & Application** (Application)
 
 ---
 
@@ -46,18 +36,6 @@ The VieLaw benchmark consists of **1,580 instances** categorized by cognitive co
 
 ## 📂 Repository Structure
 
-The corpus is organized hierarchically to support Curriculum Learning strategies, divided into three distinct tasks based on complexity and legal domains:
-
-* **Task 1: General Domain (Dữ liệu Tổng quát)**
-    * Broad coverage of *Civil*, *Administrative*, and *Criminal* law.
-* **Task 2: In-depth Analysis (Phân tích Chuyên sâu)**
-    * Focused datasets for *Administrative* and *Criminal* domains.
-* **Task 3: Granular Legal Components (Thành phần Chi tiết)**
-    * Highly structured data for fine-grained extraction, covering *Criminal Code* (Penal Code) components and *Administrative* regulations:
-        * *Legal Sentences/Case Law (Án từ)*
-        * *Articles/Statutes (Điều luật)*
-        * *Crimes/Charges (Tội danh)*
-
 ```text
 VieLaw/
 ├── task1/
@@ -73,11 +51,8 @@ VieLaw/
     ├── boluathinhsu_toidanh.json
     └── hanhchinh_task03.json
 
-```text
-VieLaw/
-├── Task 1/ (General: Civil, Admin, Criminal)
-├── Task 2/ (In-depth: Admin, Criminal)
-└── Task 3/ (Granular: Articles, Case Law, Crimes)
+```
+---
 
 ## 🛠️ Data Access Guide
 
@@ -111,10 +86,12 @@ def load_vielaw_data(file_path):
 # Usage
 data = load_vielaw_data('path/to/hinhsu_task1.json')
 ```
+---
 ## 📜 Citation
 
 If you use **VieLaw** in your research or software projects, please cite it as follows:
 
 ```bibtex
 ```
+---
 # ⚖️ License
