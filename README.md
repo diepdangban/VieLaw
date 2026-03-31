@@ -1,4 +1,4 @@
-# 🏛️ VieLaw: Vietnamese Legal Dataset
+# 🏛️ VLaw158: Vietnamese Legal Dataset
 
 ![Status](https://img.shields.io/badge/Status-Protected-orange)
 ![Format](https://img.shields.io/badge/Format-JSON-blue)
